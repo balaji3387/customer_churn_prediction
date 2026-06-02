@@ -13,9 +13,24 @@ st.write("Enter the customer's details below to predict the likelihood of churn.
 @st.cache_resource
 def load_assets():
     with open("customer_churn_model.pkl", "rb") as model_file:
-        model = pickle.load(model_file)
+        loaded_pickle = pickle.load(model_file)
+        
+    # Check if the pickle file is a dictionary wrapping the model
+    if isinstance(loaded_pickle, dict):
+        # Look for common keys you might have used like 'model' or 'rf'
+        if 'model' in loaded_pickle:
+            model = loaded_pickle['model']
+        elif 'rf' in loaded_pickle:
+            model = loaded_pickle['rf']
+        else:
+            # If it's a dict but keys are unknown, take the first value
+            model = list(loaded_pickle.values())[0]
+    else:
+        model = loaded_pickle
+
     with open("encoders.pkl", "rb") as encoder_file:
         encoders = pickle.load(encoder_file)
+        
     return model, encoders
 
 try:
