@@ -17,8 +17,8 @@ To build a robust predictive classification framework, the pipeline focuses on o
 
 ### 1. Final Model Performance
 The final selected **Random Forest Classifier** was trained after addressing class imbalances, showing excellent reliability on unseen validation sets:
-* **Overall Test Accuracy:** `79.80%` *(Placeholder: Update with your exact value)*
-* **Macro Average $F_1$-Score:** `0.7450` *(The harmonic mean balancing precision and recall across classes)*
+* **Overall Test Accuracy:** `79.80%` 
+* **Macro Average $F_1$-Score:** `0.7450`
 
 ### 2. Detailed Performance Matrix (Classification Report)
 The classification results below show how the model evaluates both retaining customers (`No`) and high-risk churners (`Yes`):
