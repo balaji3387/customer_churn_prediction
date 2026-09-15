@@ -29,7 +29,6 @@ The classification results below show how the model evaluates both retaining cus
 | **Churn (Canceled)** | 0.67 | 0.52 | 0.59 | 374 |
 | **Overall Accuracy** | | | **0.80** | **1409** |
 
-*Note: The precision and recall numbers above can be updated directly from your final notebook output matrix.*
 
 ### 🔍 Key Machine Learning Insights
 * **Top Predictive Features:** Feature importance rankings revealed that customer **tenure**, **Contract type** (Month-to-month contracts carry a significantly higher churn correlation), and **Monthly Charges** are the dominant factors influencing user churn.
